@@ -1,0 +1,29 @@
+.destaque {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+    position: absolute;
+    height: 100px;
+    padding: 0 50px;
+}
+
+.textos {
+    width: 50%;
+}
+
+.textos h1 {
+    font-size: 48px;
+}
+
+.textos h2 {
+    font-size: 46px;
+}
+
+.textos p {
+    font-size: 18px;
+}
+
+.video {
+    width: 50%;
+}

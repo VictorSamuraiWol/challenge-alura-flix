@@ -1,0 +1,8 @@
+.rodape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 3px solid var(--color-primary);
+    background-color: var(--backgroundColorButton-one);
+    padding: 42px 0;
+}

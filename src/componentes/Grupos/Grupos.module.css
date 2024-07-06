@@ -1,0 +1,8 @@
+.gruposContainer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    gap: 92px;
+    padding: 16px 42px 160px 42px;
+}

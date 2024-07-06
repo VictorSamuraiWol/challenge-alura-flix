@@ -1,0 +1,11 @@
+.headerMain {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 50px;
+}
+
+.navHeader {
+    display: flex;
+    gap: 25px;
+}
