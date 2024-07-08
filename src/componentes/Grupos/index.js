@@ -12,7 +12,7 @@ function Grupos() {
             <Grupo 
                 borderColorBottom='var(--color-secondary)' borderColor='var(--color-secondary)' backgroundColor='var(--color-secondary)'
                 boxShadow='var(--color-secondary)'
-                titulo='Cavaleiros de prata' 
+                titulo='Cavaleiros de Prata' 
             />
             <Grupo 
                 borderColorBottom='var(--color-terciary)' borderColor='var(--color-terciary)' backgroundColor='var(--color-terciary)'

@@ -14,17 +14,8 @@ function Grupo({ titulo, backgroundColor, borderColor, borderColorBottom, boxSha
                 <Cavaleiro 
                     borderColor={borderColor} 
                     borderColorBottom={borderColorBottom}
-                    boxShadow={boxShadow} 
-                />
-                <Cavaleiro 
-                    borderColor={borderColor}
-                    borderColorBottom={borderColorBottom}
-                    boxShadow={boxShadow} 
-                />
-                <Cavaleiro 
-                    borderColor={borderColor}
-                    borderColorBottom={borderColorBottom}
-                    boxShadow={boxShadow} 
+                    boxShadow={boxShadow}
+                    titulo={titulo} 
                 />
             </div>
         </div>

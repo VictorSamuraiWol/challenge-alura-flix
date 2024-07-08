@@ -1,17 +1,13 @@
-.cardCavaleiro {
+.grupo {
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    gap: 8px;
-    width: 430px;
-    height: 320px;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
-.video {
-    width: 100%;
-
+.elementCavaleiro {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
 .iconesTextosContainer {
