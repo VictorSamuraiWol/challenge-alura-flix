@@ -1,0 +1,35 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.tituloSelect {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.imagemVideo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.textareaContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 575px;
+}
+
+.textarea {
+    font-size: 20px;
+    padding: 30px 10px;
+    border-radius: 8px;
+}
+
+.botoes {
+    display: flex;
+    gap: 30px;
+}

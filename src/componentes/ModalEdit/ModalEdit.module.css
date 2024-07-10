@@ -1,0 +1,37 @@
+.iconesTextos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.modalOverlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.modalContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 294px;
+    background: transparent;
+    padding: 0;
+    border: 0;
+    width: 974px;
+}
+
+.formModal {
+    display: flex;
+    flex-direction: column;
+}
