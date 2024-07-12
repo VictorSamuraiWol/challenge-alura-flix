@@ -2,6 +2,11 @@ import styles from './ModalEdit.module.css';
 import vectorEdit from '../Grupos/Grupo/Cavaleiros/vectorEdit.png';
 import React, { useState } from 'react';
 import Modal from 'react-modal';
+import Campo from 'componentes/Form/Campo';
+import CampoTextarea from 'componentes/Form/CampoTextarea';
+import Botao from 'componentes/Header/Botao';
+import deleteIcon from './delete-icon.png'
+import BotaoSubmit from 'componentes/Header/Botao/BotaoSubmit';
 
 // Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
 Modal.setAppElement('#root');
@@ -32,14 +37,31 @@ return (
         className={styles.modalContent}
         >
         <h1>EDITAR CARD:</h1>
-        <button onClick={closeModal}>close</button>
+        <img src={deleteIcon} alt='imagem delete' onClick={closeModal} />
         <form className={styles.formModal}>
-            
-            <input />
-            <button>tab navigation</button>
-            <button>stays</button>
-            <button>inside</button>
-            <button>the modal</button>
+            <Campo titulo='Titulo'></Campo>
+            <Campo titulo='Categoria'></Campo>
+            <Campo titulo='Imagem'></Campo>
+            <Campo titulo='Video'></Campo>
+            <CampoTextarea rows='4'  />
+            <div className={styles.modalBotoes}>
+                <BotaoSubmit
+                    
+                    className={styles.button}
+                    nameButton='GUARDAR'
+                    color='var(--color-button-one)'
+                    background='var(--backgroundColorButton-one)' 
+                    border='var(--borderColorButton-one)' boxShadowColor='var(--boxShadowColor-one)'
+                >
+                </BotaoSubmit>
+                <Botao
+                    className={styles.button} 
+                    nameButton='LIMPAR'
+                    color='var(--color-button-second)' background='var(--backgroundColorButton-second)' 
+                    border='var(--borderColorButton-second)' boxShadowColor='var(--boxShadowColor-second)'
+                ></Botao>
+            </div>
+
         </form>
         </Modal>
     </div>

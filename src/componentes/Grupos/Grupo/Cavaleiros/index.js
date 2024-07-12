@@ -17,6 +17,9 @@ useEffect(() => {
         })
 }, [])
 
+console.log(cavaleiros, 'pagina home')
+
+
 return (
     <div className={styles.grupo}>
         {cavaleiros.map(cavaleiro => {

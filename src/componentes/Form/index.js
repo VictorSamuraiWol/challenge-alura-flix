@@ -2,33 +2,109 @@ import Botao from 'componentes/Header/Botao';
 import Campo from './Campo';
 import styles from './Form.module.css';
 import ListaSuspensa from './ListaSuspensa';
+import CampoTextarea from './CampoTextarea';
+import { useCavaleiros } from 'contexto/CavaleirosContext';
+import { useEffect } from 'react';
+import BotaoSubmit from 'componentes/Header/Botao/BotaoSubmit';
+
 
 function Form() {
+    const { cavaleiros, setCavaleiros, newTitulo, setNewTitulo, newLink, setNewLink, newTipo, setNewTipo, newImagem, setNewImagem, newDescricao, setNewDescricao } = useCavaleiros();
+
+    //função passando o objeto apenas de forma temporária
+    // function aoSalvar(event) {
+    //     event.preventDefault();     
+    //     setCavaleiros([...cavaleiros,  {
+    //         titulo: newTitulo,
+    //         link: newLink,
+    //         tipo: newTipo,
+    //         imagem: newImagem,
+    //         descricao: newDescricao
+    //     }])
+    //     console.log('Salvei!!!')      
+    // }
+
+    //função utilizando POST para salvar na API
+    function aoSalvar(event) {
+        event.preventDefault();
+        const jsonBody = JSON.stringify({
+            titulo: newTitulo,
+            link: newLink,
+            tipo: newTipo,
+            imagem: newImagem,
+            descricao: newDescricao
+        })
+        fetch('http://localhost:8080/cavaleiros', {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: jsonBody
+        })
+        .then((res) => res.json())
+        .then((data) => {
+            console.log(data)
+            console.log('Salvei!!!')
+        })      
+    }
+
+    function cleanForm() {
+        setNewTitulo('')
+        setNewLink('')
+        setNewTipo('')
+        setNewImagem('')
+        setNewDescricao('')
+    }
+
     return(
-        <form className={styles.form}>
+        <form onSubmit={aoSalvar} className={styles.form}>
             <div className={styles.tituloSelect}>
-                <Campo titulo='Titulo' placeholder='Digite o titulo...' ></Campo>
-                <ListaSuspensa></ListaSuspensa>
+                <Campo 
+                    newValue={newTitulo} 
+                    setNewValue={newTitulo => setNewTitulo(newTitulo)} 
+                    titulo='Titulo' 
+                    placeholder='Digite o titulo...' >
+                </Campo>
+                <ListaSuspensa 
+                    newValue={newTipo} 
+                    setNewValue={newTipo => setNewTipo(newTipo)}>
+                </ListaSuspensa>
             </div>
             <div className={styles.imagemVideo}>
-                <Campo titulo='Imagem' placeholder='Link da imagem...' ></Campo>
-                <Campo titulo='Video' placeholder='Digite o link do video...' ></Campo>
+                <Campo 
+                    newValue={newImagem} 
+                    setNewValue={newImagem => setNewImagem(newImagem)} titulo='Imagem' 
+                    placeholder='Link da imagem...' >
+                </Campo>
+                <Campo 
+                    newValue={newLink} 
+                    setNewValue={newLink => setNewLink(newLink)} titulo='Video' 
+                    placeholder='Link do embed video...' >
+                </Campo>
             </div>
             <div className={styles.textareaContainer}>
-                <label>Descrição</label>
-                <textarea className={styles.textarea} placeholder='Sobre o que é esse video?' rows='10' cols='1' ></textarea>
+                <CampoTextarea 
+                    newValue={newDescricao} 
+                    setNewValue={newDescricao => setNewDescricao(newDescricao)} 
+                    rows='10' 
+                />
             </div>
             <div className={styles.botoes}>
-                <Botao
+                <BotaoSubmit 
                     color='var(--color-button-second)' background='var(--backgroundColorButton-second)' 
                     border='var(--borderColorButton-second)' boxShadowColor='var(--boxShadowColor-second)' 
-                    nameButton='GUARDAR'>
-                </Botao>
+                    nameButton='GUARDAR'
+                >
+                </BotaoSubmit>
+
                 <Botao 
                     color='var(--color-button-one)'
                     background='var(--backgroundColorButton-one)' 
                     border='var(--borderColorButton-one)' boxShadowColor='var(--boxShadowColor-one)'
-                    nameButton='LIMPAR'>
+                    nameButton='LIMPAR'
+                    type='submit'
+                    func={cleanForm}
+                >
                 </Botao>
             </div>
         </form>

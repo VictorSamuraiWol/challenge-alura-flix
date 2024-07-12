@@ -1,3 +1,7 @@
+.container {
+    
+}
+
 .iconesTextos {
     display: flex;
     justify-content: center;
@@ -24,14 +28,32 @@
     align-items: center;
     flex-direction: column;
     position: absolute;
-    top: 294px;
+    top: 40px;
     background: transparent;
-    padding: 0;
-    border: 0;
-    width: 974px;
+    width: 35%;
+    padding: 20px 10px 40px 10px;
+    border: 2px solid var(--color-primary);
+    border-radius: 12px;
+}
+
+.modalContent img {
+    position: absolute;
+    top: 32px;
+    right: 32px;
+    width: 25px;
+    cursor: pointer;
 }
 
 .formModal {
     display: flex;
     flex-direction: column;
+    gap: 20px;
+    font-size: 20px;
+}
+
+.modalBotoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;     
 }

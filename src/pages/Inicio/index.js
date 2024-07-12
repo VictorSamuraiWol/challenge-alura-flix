@@ -6,6 +6,7 @@ import Grupos from 'componentes/Grupos';
 import Rodape from 'componentes/Rodape';
 
 function Inicio() {
+
     return (
         <>
             <Header />
