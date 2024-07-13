@@ -1,7 +1,7 @@
 import Campo from '../Campo';
 import styles from './CampoTextarea.module.css';
 
-function CampoTextarea({ newValue, setNewValue, rows }) {
+function CampoTextarea({ aoAlterarModal, nome, newValue, setNewValue, rows }) {
 
     function setNewValueFun (event) {
         setNewValue(event.target.value)
@@ -13,11 +13,13 @@ function CampoTextarea({ newValue, setNewValue, rows }) {
             <label>Descrição</label>
             <textarea 
                 value={newValue} 
-                onChange={setNewValueFun}  
+                onChange={aoAlterarModal || setNewValueFun}  
                 className={styles.textarea} 
                 placeholder='Sobre o que é esse video?' 
                 rows={rows} 
-                cols='1' >
+                cols='1'
+                name={nome}
+            >
             </textarea>
         </>
     )

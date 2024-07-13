@@ -71,38 +71,6 @@
       "imagem": "",
       "descricao": "",
       "id": "bc0b"
-    },
-    {
-      "id": "aa38",
-      "titulo": "o",
-      "link": "ooo",
-      "tipo": "Cavaleiros de Bronze",
-      "imagem": "oo",
-      "descricao": "oooo"
-    },
-    {
-      "id": "f53d",
-      "titulo": "a",
-      "link": "https://www.youtube.com/watch?v=zbewhxSDLoQ",
-      "tipo": "Cavaleiros de Ouro",
-      "imagem": "aa",
-      "descricao": "aaaa"
-    },
-    {
-      "id": "ed4a",
-      "titulo": "a",
-      "link": "https://www.youtube.com/embed/zbewhxSDLoQ",
-      "tipo": "Cavaleiros de Ouro",
-      "imagem": "aa",
-      "descricao": "aaaa"
-    },
-    {
-      "id": "03ec",
-      "titulo": "a",
-      "link": "nao tem",
-      "tipo": "Cavaleiros de Prata",
-      "imagem": "aa",
-      "descricao": "aaaa"
     }
   ]
 }

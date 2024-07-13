@@ -1,6 +1,6 @@
 import styles from './ListaSuspensa.module.css';
 
-function ListaSuspensa({ newValue, setNewValue }) {
+function ListaSuspensa({ aoAlterarModal, required, newValue, setNewValue }) {
 
     function setNewValueFun (event) {
         setNewValue(event.target.value)
@@ -12,7 +12,8 @@ function ListaSuspensa({ newValue, setNewValue }) {
             <label>Tipo</label>
             <select 
                 value={newValue} 
-                onChange={setNewValueFun} 
+                onChange={aoAlterarModal || setNewValueFun}
+                required={required} 
             >
                 <option value=''>Escolha o tipo...</option>
                 <option value='Cavaleiros de Ouro'>Cavaleiros de Ouro</option>

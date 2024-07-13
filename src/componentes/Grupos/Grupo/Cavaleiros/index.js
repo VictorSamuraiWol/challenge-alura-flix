@@ -17,12 +17,33 @@ useEffect(() => {
         })
 }, [])
 
-console.log(cavaleiros, 'pagina home')
+async function aoDeletar(newId) {
+    const url = `http://localhost:8080/cavaleiros?id=${newId}`
 
+    const options = {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json",
+            'Authorization': 'Bearer seu_token_de_autenticacao'
+        }
+    };
+
+    await fetch(url, options)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Erro ao deletar o cavaleiro');
+          }
+    })
+    .catch((error) => {
+        console.error('Erro:', error);
+    })  
+    console.log('Necessário autorização!');
+    alert('Necessário autorização!');
+};
 
 return (
     <div className={styles.grupo}>
-        {cavaleiros.map(cavaleiro => {
+        {cavaleiros && cavaleiros.map(cavaleiro => {
             return cavaleiro.tipo === titulo && <div style={{ border: `3px solid ${borderColor}`, boxShadow: `0px 0px 20px ${boxShadow}` }} key={cavaleiro.id} className={styles.elementCavaleiro}>
                 <iframe
                     style={{ borderBottom: `3px solid ${borderColorBottom}`, boxShadow: `0px 0px 20px ${boxShadow}` }}
@@ -38,17 +59,18 @@ return (
 
                 <div className={styles.iconesTextosContainer}>
                     <div className={styles.iconesTextos}>
-                        <img src={vectorDelete} alt='icone delete' />
+                        <img onClick={() => aoDeletar(cavaleiro.id)} src={vectorDelete} alt='icone delete' />
                         <p>DELETAR</p>
                     </div>
                     <div className={styles.iconesTextos}>
-                        <ModalEdit />
+                        <ModalEdit idModal={cavaleiro.id} />
                         {/* <img onClick={openModal} src={vectorEdit} alt='icone editar' /> */}
                         {/* <p>EDITAR</p> */}
                     </div>
                 </div>
             </div>
-        })}
+            })
+        }
     </div>
     )
 }

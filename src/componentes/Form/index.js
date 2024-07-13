@@ -11,19 +11,6 @@ import BotaoSubmit from 'componentes/Header/Botao/BotaoSubmit';
 function Form() {
     const { cavaleiros, setCavaleiros, newTitulo, setNewTitulo, newLink, setNewLink, newTipo, setNewTipo, newImagem, setNewImagem, newDescricao, setNewDescricao } = useCavaleiros();
 
-    //função passando o objeto apenas de forma temporária
-    // function aoSalvar(event) {
-    //     event.preventDefault();     
-    //     setCavaleiros([...cavaleiros,  {
-    //         titulo: newTitulo,
-    //         link: newLink,
-    //         tipo: newTipo,
-    //         imagem: newImagem,
-    //         descricao: newDescricao
-    //     }])
-    //     console.log('Salvei!!!')      
-    // }
-
     //função utilizando POST para salvar na API
     function aoSalvar(event) {
         event.preventDefault();
@@ -45,7 +32,11 @@ function Form() {
         .then((data) => {
             console.log(data)
             console.log('Salvei!!!')
-        })      
+            alert('Card adicionado com sucesso!!!')
+        }) 
+        .catch((error) => {
+            console.log(error)
+        })    
     }
 
     function cleanForm() {
@@ -67,7 +58,9 @@ function Form() {
                 </Campo>
                 <ListaSuspensa 
                     newValue={newTipo} 
-                    setNewValue={newTipo => setNewTipo(newTipo)}>
+                    setNewValue={newTipo => setNewTipo(newTipo)}
+                    required={true}
+                    >                    
                 </ListaSuspensa>
             </div>
             <div className={styles.imagemVideo}>
@@ -79,7 +72,9 @@ function Form() {
                 <Campo 
                     newValue={newLink} 
                     setNewValue={newLink => setNewLink(newLink)} titulo='Video' 
-                    placeholder='Link do embed video...' >
+                    placeholder='Link do embed video...' 
+                    required={true}
+                >
                 </Campo>
             </div>
             <div className={styles.textareaContainer}>
@@ -94,6 +89,7 @@ function Form() {
                     color='var(--color-button-second)' background='var(--backgroundColorButton-second)' 
                     border='var(--borderColorButton-second)' boxShadowColor='var(--boxShadowColor-second)' 
                     nameButton='GUARDAR'
+                    // func={aoSalvar}
                 >
                 </BotaoSubmit>
 
@@ -102,7 +98,6 @@ function Form() {
                     background='var(--backgroundColorButton-one)' 
                     border='var(--borderColorButton-one)' boxShadowColor='var(--boxShadowColor-one)'
                     nameButton='LIMPAR'
-                    type='submit'
                     func={cleanForm}
                 >
                 </Botao>

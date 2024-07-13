@@ -9,7 +9,8 @@ export default function CavaleirosProvider({ children }) {
     const [newLink, setNewLink] = useState('') 
     const [newTipo, setNewTipo] = useState('') 
     const [newImagem, setNewImagem] = useState('') 
-    const [newDescricao, setNewDescricao] = useState('') 
+    const [newDescricao, setNewDescricao] = useState('')
+    const [newId, setNewId] = useState('') 
 
     
     return(
@@ -26,7 +27,9 @@ export default function CavaleirosProvider({ children }) {
                 newImagem,
                 setNewImagem,
                 newDescricao,
-                setNewDescricao
+                setNewDescricao,
+                newId, 
+                setNewId
                 }}
         >
             {children}
@@ -35,7 +38,7 @@ export default function CavaleirosProvider({ children }) {
 };
 
 export function useCavaleiros() {
-    const { cavaleiros, setCavaleiros, newTitulo, setNewTitulo, newLink, setNewLink, newTipo, setNewTipo, newImagem, setNewImagem, newDescricao, setNewDescricao } = useContext(CavaleirosContext);
+    const { cavaleiros, setCavaleiros, newTitulo, setNewTitulo, newLink, setNewLink, newTipo, setNewTipo, newImagem, setNewImagem, newDescricao, setNewDescricao, newId, setNewId } = useContext(CavaleirosContext);
 
     return {
         cavaleiros,
@@ -49,6 +52,8 @@ export function useCavaleiros() {
         newImagem,
         setNewImagem,
         newDescricao,
-        setNewDescricao
+        setNewDescricao,
+        newId,
+        setNewId
     }
 };

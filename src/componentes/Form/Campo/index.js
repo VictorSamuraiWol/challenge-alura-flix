@@ -1,6 +1,6 @@
 import styles from './Campo.module.css';
 
-function Campo({ newValue, setNewValue, titulo, placeholder }) {
+function Campo({ aoAlterarModal, nome, required, newValue, setNewValue, titulo, placeholder }) {
 
     function setNewValueFun (event) {
         setNewValue(event.target.value)
@@ -12,8 +12,10 @@ function Campo({ newValue, setNewValue, titulo, placeholder }) {
             <label>{titulo}</label>
             <input 
                 value={newValue} 
-                onChange={setNewValueFun} 
-                placeholder={placeholder} 
+                onChange={aoAlterarModal || setNewValueFun } 
+                placeholder={placeholder}
+                required={required}
+                name={nome}
             />
         </div>
     )
