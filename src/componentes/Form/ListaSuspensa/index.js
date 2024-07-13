@@ -10,7 +10,8 @@ function ListaSuspensa({ aoAlterarModal, required, newValue, setNewValue }) {
     return(
         <div className={styles.listaSuspensa}>
             <label>Tipo</label>
-            <select 
+            <select
+                className={styles.select} 
                 value={newValue} 
                 onChange={aoAlterarModal || setNewValueFun}
                 required={required} 
