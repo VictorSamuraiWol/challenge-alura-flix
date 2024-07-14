@@ -18,14 +18,10 @@ useEffect(() => {
 }, [])
 
 async function aoDeletar(newId) {
-    const url = `http://localhost:8080/cavaleiros?id=${newId}`
+    const url = `http://localhost:8080/cavaleiros/${newId}`
 
     const options = {
         method: "DELETE",
-        headers: {
-            "Content-Type": "application/json",
-            'Authorization': 'Bearer seu_token_de_autenticacao'
-        }
     };
 
     await fetch(url, options)
@@ -33,12 +29,12 @@ async function aoDeletar(newId) {
         if (!response.ok) {
             throw new Error('Erro ao deletar o cavaleiro');
           }
+        response.json();
+        setCavaleiros(cavaleiros.filter(cavaleiro => cavaleiro.id !== newId))
     })
     .catch((error) => {
         console.error('Erro:', error);
     })  
-    console.log('Necessário autorização!');
-    alert('Necessário autorização!');
 };
 
 return (

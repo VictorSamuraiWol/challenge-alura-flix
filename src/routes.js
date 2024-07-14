@@ -1,4 +1,4 @@
-import Cavaleiro from "componentes/Grupos/Grupo/Cavaleiros";
+import Cavaleiros from "componentes/Grupos/Grupo/Cavaleiros";
 import Inicio from "pages/Inicio";
 import Video from "pages/NovoVideo";
 import PaginaBase from "pages/PaginaBase";
@@ -6,7 +6,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function AppRoutes() {
   // mockar api no json server:
-  // $ npx json-server src/database/cavaleirosDb.json --port 8080
+  // npx json-server src/database/cavaleirosDb.json --port 8080
 
   return (
       <BrowserRouter>
@@ -14,6 +14,7 @@ function AppRoutes() {
           <Route path="/" element={<PaginaBase />}>
             <Route index element={<Inicio />}></Route>
             <Route path="/video" element={<Video />}></Route>
+            <Route path="cavaleiros/:id" element={<Cavaleiros />}></Route>
           </Route>          
         </Routes>
       </BrowserRouter>

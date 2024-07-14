@@ -32,7 +32,7 @@ function Form() {
         .then((data) => {
             console.log(data)
             console.log('Salvei!!!')
-            alert('Card adicionado com sucesso!!!')
+            alert('Cavaleiro adicionado com sucesso!!!')
         }) 
         .catch((error) => {
             console.log(error)

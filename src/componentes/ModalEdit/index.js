@@ -16,7 +16,7 @@ Modal.setAppElement('#root');
 function ModalEdit({ idModal }) {
     const [modalIsOpen, setIsOpen] = useState(false);
 
-    const { cavaleiros, setCavaleiros, newTitulo, setNewTitulo, newLink, setNewLink, newTipo, setNewTipo, newImagem, setNewImagem, newDescricao, setNewDescricao, newId } = useCavaleiros();
+    let { cavaleiros, setCavaleiros, newTitulo, setNewTitulo, newLink, setNewLink, newTipo, setNewTipo, newImagem, setNewImagem, newDescricao, setNewDescricao, newId } = useCavaleiros();
 
     const [formData, setFormData] = useState({});
 
@@ -28,33 +28,54 @@ function ModalEdit({ idModal }) {
         setIsOpen(false);
     }
 
-    function aoAlterarModal() {
-        console.log('aoAlterarModal')
-        
+    //função utilizando PUT para alterar na API
+    async function aoSalvarModal() {
+        // event.preventDefault();
+        const jsonBody = JSON.stringify({
+            titulo: newTitulo,
+            link: newLink,
+            tipo: newTipo,
+            imagem: newImagem,
+            descricao: newDescricao
+        })
+        await fetch(`http://localhost:8080/cavaleiros/${idModal}`, {
+            method: 'PUT',
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: jsonBody
+        })
+        .then((res) => res.json())
+        .then((data) => {
+            console.log(data)
+            console.log('Salvei!!!')
+            alert('Cavaleiro atualizado com sucesso!!!')
+        }) 
+        .catch((error) => {
+            console.log(error)
+        })    
     }
 
-    async function aoSalvarModal(event) {
-        event.preventDefault();
-        console.log('salvei!!!')
-        try {
-        await fetch(`http://localhost:8080/cavaleiros?id=${idModal}`, { 
-            method: 'PUT',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                titulo: newTitulo,
-                link: newLink,
-                tipo: newTipo,
-                imagem: newImagem,
-                descricao: newDescricao
-            })
-        });
-            // if (!response.ok) {
-            //     throw new Error('Erro ao atualizar o item');
-            // }
-        } catch (error) {
-          console.error('Erro:', error);
-        } 
-    };
+    function aoAlterarModalTitulo(event) {
+        setNewTitulo(event.target.value)
+    }
+
+    function aoAlterarModalTipo(event) {
+        setNewTipo(event.target.value)
+    }
+
+    function aoAlterarModalImagem(event) {
+        setNewImagem(event.target.value)
+    }
+
+    function aoAlterarModalVideo(event) {
+        setNewLink(event.target.value)
+    }
+
+    function aoAlterarModalDescricao(event) {
+        setNewDescricao(event.target.value)
+    }
+
 
     return (
         <div className={styles.container}>
@@ -73,35 +94,38 @@ function ModalEdit({ idModal }) {
             >
             <h1>EDITAR CARD:</h1>
             <img src={deleteIcon} alt='imagem delete' onClick={closeModal} />
+
             <form onSubmit={aoSalvarModal} className={styles.formModal}>
             
             
                 <Campo
-                    aoAlterarModal={aoAlterarModal}                   
-                    titulo='titulo'
+                    aoAlterarModal={aoAlterarModalTitulo}
+                    newValue={newTitulo}
+                    titulo='Titulo'
                 ></Campo>
 
                 <ListaSuspensa 
-                    aoAlterarModal={aoAlterarModal} 
+                    aoAlterarModal={aoAlterarModalTipo} 
+                    newValue={newTipo}
                     required={true} 
                 ></ListaSuspensa>
 
                 <Campo 
-                    aoAlterarModal={aoAlterarModal} 
-                    setNewValue={cavaleiros.map(cavaleiro => (cavaleiro.id === idModal) ? cavaleiro.imagem : null)} 
+                    aoAlterarModal={aoAlterarModalImagem} 
+                    newValue={newImagem}
                     titulo='Imagem' 
                 ></Campo>
 
                 <Campo 
-                    aoAlterarModal={aoAlterarModal} 
-                    setNewValue={cavaleiros.map(cavaleiro => (cavaleiro.id === idModal) ? cavaleiro.link : null)} 
+                    aoAlterarModal={aoAlterarModalVideo}
+                    newValue={newLink}
                     titulo='Video' 
                     required={true} 
                 ></Campo>
 
                 <CampoTextarea 
-                    aoAlterarModal={aoAlterarModal} 
-                    setNewValue={cavaleiros.map(cavaleiro => (cavaleiro.id === idModal) ? cavaleiro.descricao : null)} 
+                    aoAlterarModal={aoAlterarModalDescricao} 
+                    newValue={newDescricao}
                     rows='4'  
                 />
 
