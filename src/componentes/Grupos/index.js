@@ -7,17 +7,17 @@ function Grupos() {
             <Grupo 
                 borderColorBottom='var(--color-primary)' borderColor='var(--color-primary)' backgroundColor='var(--color-primary)'
                 boxShadow='var(--color-primary)'  
-                titulo='Cavaleiros de Ouro' 
+                titulo='Cavaleiros de Ouro'
             />
             <Grupo 
                 borderColorBottom='var(--color-secondary)' borderColor='var(--color-secondary)' backgroundColor='var(--color-secondary)'
                 boxShadow='var(--color-secondary)'
-                titulo='Cavaleiros de Prata' 
+                titulo='Cavaleiros de Prata'
             />
             <Grupo 
                 borderColorBottom='var(--color-terciary)' borderColor='var(--color-terciary)' backgroundColor='var(--color-terciary)'
                 boxShadow='var(--color-terciary)'
-                titulo='Cavaleiros de Bronze' 
+                titulo='Cavaleiros de Bronze'
             />
         </section>
     )

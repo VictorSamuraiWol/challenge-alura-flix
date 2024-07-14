@@ -6,4 +6,32 @@
     text-align: center;
     padding: 16px 0;
     margin: 50px 0;
+    animation: shine 2s infinite alternate;
+
+}
+
+/* Efeito de brilho em movimento */
+@keyframes shine {
+  0%, 100% {
+    text-shadow: 
+      0 0 5px var(--color-secondary), 
+      0 0 10px var(--color-secondary), 
+      0 0 20px var(--color-secondary), 
+      0 0 30px var(--background-color), 
+      0 0 40px var(--background-color), 
+      0 0 50px var(--background-color), 
+      0 0 60px var(--color-secondary), 
+      0 0 70px var(--color-secondary);
+  }
+  50% {
+    text-shadow: 
+      0 0 5px var(--background-color), 
+      0 0 10px var(--background-color), 
+      0 0 20px var(--background-color), 
+      0 0 30px var(--color-secondary), 
+      0 0 40px var(--color-secondary), 
+      0 0 50px var(--color-secondary), 
+      0 0 60px var(--background-color), 
+      0 0 70px var(--background-color);
+  }
 }

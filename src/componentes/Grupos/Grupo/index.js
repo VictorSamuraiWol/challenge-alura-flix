@@ -8,7 +8,7 @@ function Grupo({ titulo, backgroundColor, borderColor, borderColorBottom, boxSha
         <div className={styles.grupoContainer}>
                 <Titulo 
                     backgroundColor={backgroundColor} 
-                    titulo={titulo} 
+                    titulo={titulo}
                 />
             <div className={styles.grupo}>
                 <Cavaleiro 

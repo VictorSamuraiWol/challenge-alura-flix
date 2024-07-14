@@ -95,8 +95,7 @@ function ModalEdit({ idModal }) {
             <h1>EDITAR CARD:</h1>
             <img src={deleteIcon} alt='imagem delete' onClick={closeModal} />
 
-            <form onSubmit={aoSalvarModal} className={styles.formModal}>
-            
+            <form onSubmit={aoSalvarModal} className={styles.formModal}>            
             
                 <Campo
                     aoAlterarModal={aoAlterarModalTitulo}
@@ -127,9 +126,7 @@ function ModalEdit({ idModal }) {
                     aoAlterarModal={aoAlterarModalDescricao} 
                     newValue={newDescricao}
                     rows='4'  
-                />
-
-               
+                />               
 
                 <div className={styles.modalBotoes}>
                     <BotaoSubmit                        
@@ -141,16 +138,13 @@ function ModalEdit({ idModal }) {
                     >
                     </BotaoSubmit>
 
-                    {/* <button type='submit' onSubmit={aoSalvar}>Submit</button> */}
-
                     <Botao
                         className={styles.button} 
                         nameButton='LIMPAR'
                         color='var(--color-button-second)' background='var(--backgroundColorButton-second)' 
                         border='var(--borderColorButton-second)' boxShadowColor='var(--boxShadowColor-second)'
                     ></Botao>
-                </div>
-            
+                </div>          
             
             </form>
             </Modal>
