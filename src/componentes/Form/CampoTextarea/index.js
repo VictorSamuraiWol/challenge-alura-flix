@@ -1,7 +1,7 @@
 import Campo from '../Campo';
 import styles from './CampoTextarea.module.css';
 
-function CampoTextarea({ aoAlterarModal, nome, newValue, setNewValue, rows }) {
+function CampoTextarea({ required, aoAlterarModal, nome, newValue, setNewValue, rows }) {
 
     function setNewValueFun (event) {
         setNewValue(event.target.value)
@@ -19,6 +19,7 @@ function CampoTextarea({ aoAlterarModal, nome, newValue, setNewValue, rows }) {
                 rows={rows} 
                 cols='1'
                 name={nome}
+                required={required}
             >
             </textarea>
         </>

@@ -6,7 +6,7 @@ import logoMain from './LogoMain.png'
 function Header() {
     return (
         <header className={styles.headerMain}>
-            {<img src={logoMain} alt='logo AluraFlix' />}
+            <img src={logoMain} alt='logo AluraFlix' />
             <nav className={styles.navHeader}>
                 <Botao 
                     color='var(--color-button-one)'

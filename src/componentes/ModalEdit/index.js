@@ -101,6 +101,7 @@ function ModalEdit({ idModal }) {
                     aoAlterarModal={aoAlterarModalTitulo}
                     newValue={newTitulo}
                     titulo='Titulo'
+                    required={true}
                 ></Campo>
 
                 <ListaSuspensa 
@@ -112,7 +113,8 @@ function ModalEdit({ idModal }) {
                 <Campo 
                     aoAlterarModal={aoAlterarModalImagem} 
                     newValue={newImagem}
-                    titulo='Imagem' 
+                    titulo='Imagem'
+                    required={true} 
                 ></Campo>
 
                 <Campo 
@@ -125,7 +127,8 @@ function ModalEdit({ idModal }) {
                 <CampoTextarea 
                     aoAlterarModal={aoAlterarModalDescricao} 
                     newValue={newDescricao}
-                    rows='4'  
+                    rows='4'
+                    required={true}  
                 />               
 
                 <div className={styles.modalBotoes}>

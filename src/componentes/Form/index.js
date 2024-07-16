@@ -33,6 +33,8 @@ function Form() {
             console.log(data)
             console.log('Salvei!!!')
             alert('Cavaleiro adicionado com sucesso!!!')
+
+            cleanForm();
         }) 
         .catch((error) => {
             console.log(error)
@@ -54,7 +56,9 @@ function Form() {
                     newValue={newTitulo} 
                     setNewValue={newTitulo => setNewTitulo(newTitulo)} 
                     titulo='Titulo' 
-                    placeholder='Digite o titulo...' >
+                    placeholder='Digite o titulo...' 
+                    required={true}
+                    >
                 </Campo>
                 <ListaSuspensa 
                     newValue={newTipo} 
@@ -67,7 +71,9 @@ function Form() {
                 <Campo 
                     newValue={newImagem} 
                     setNewValue={newImagem => setNewImagem(newImagem)} titulo='Imagem' 
-                    placeholder='Link da imagem...' >
+                    placeholder='Link da imagem...' 
+                    required={true}
+                >
                 </Campo>
                 <Campo 
                     newValue={newLink} 
@@ -81,7 +87,8 @@ function Form() {
                 <CampoTextarea 
                     newValue={newDescricao} 
                     setNewValue={newDescricao => setNewDescricao(newDescricao)} 
-                    rows='10' 
+                    rows='10'
+                    required={true} 
                 />
             </div>
             <div className={styles.botoes}>
@@ -89,7 +96,6 @@ function Form() {
                     color='var(--color-button-second)' background='var(--backgroundColorButton-second)' 
                     border='var(--borderColorButton-second)' boxShadowColor='var(--boxShadowColor-second)' 
                     nameButton='GUARDAR'
-                    // func={aoSalvar}
                 >
                 </BotaoSubmit>
 
