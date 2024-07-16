@@ -1,23 +1,12 @@
 :root {
-
+  /* fontes: */
   --font-primary: "Source Sans 3", sans-serif;
   --font-secondary: "Roboto", sans-serif;
-
+  /* cores: */
   --color-primary: #daa520;
   --color-secondary: #c0c0c0;
   --color-terciary: #cd7f32;
   --background-color: #262626;
-
-  --color-button-one: #daa520;
-  --backgroundColorButton-one: #040404;
-  --borderColorButton-one: #daa520;
-  --boxShadowColor-one: #daa520;
-
-  --color-button-second: #c0c0c0;
-  --backgroundColorButton-second: #262626;
-  --borderColorButton-second: #c0c0c0;
-  --boxShadowColor-second: #c0c0c0;
-
 }
 
 /* normalize(reset css) */

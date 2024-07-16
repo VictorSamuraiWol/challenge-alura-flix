@@ -135,17 +135,18 @@ function ModalEdit({ idModal }) {
                     <BotaoSubmit                        
                         className={styles.button}
                         nameButton='GUARDAR'
-                        color='var(--color-button-one)'
-                        background='var(--backgroundColorButton-one)' 
-                        border='var(--borderColorButton-one)' boxShadowColor='var(--boxShadowColor-one)'
+                        color='var(--color-primary)'
+                        background='var(--background-color)' 
+                        border='var(--color-primary)' boxShadowColor='var(--color-primary)'
                     >
                     </BotaoSubmit>
 
                     <Botao
                         className={styles.button} 
                         nameButton='LIMPAR'
-                        color='var(--color-button-second)' background='var(--backgroundColorButton-second)' 
-                        border='var(--borderColorButton-second)' boxShadowColor='var(--boxShadowColor-second)'
+                        color='var(--color-secondary)' 
+                        background='var(--background-color)' 
+                        border='var(--color-secondary)' boxShadowColor='var(--color-secondary)'
                     ></Botao>
                 </div>          
             

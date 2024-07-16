@@ -93,16 +93,17 @@ function Form() {
             </div>
             <div className={styles.botoes}>
                 <BotaoSubmit 
-                    color='var(--color-button-second)' background='var(--backgroundColorButton-second)' 
-                    border='var(--borderColorButton-second)' boxShadowColor='var(--boxShadowColor-second)' 
+                    color='var(--color-secondary)' 
+                    background='var(--background-color)' 
+                    border='var(--color-secondary)' boxShadowColor='var(--color-secondary)' 
                     nameButton='GUARDAR'
                 >
                 </BotaoSubmit>
 
                 <Botao 
-                    color='var(--color-button-one)'
-                    background='var(--backgroundColorButton-one)' 
-                    border='var(--borderColorButton-one)' boxShadowColor='var(--boxShadowColor-one)'
+                    color='var(--color-primary)'
+                    background='var(--background-color)' 
+                    border='var(--color-primary)' boxShadowColor='var(--color-primary)'
                     nameButton='LIMPAR'
                     func={cleanForm}
                 >
