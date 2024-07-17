@@ -1,8 +1,10 @@
 import { useEffect } from 'react';
 import styles from './Cavaleiros.module.css';
 import vectorDelete from './vectoDelete.png';
+import vectorInfo from './vectorInfo.png';
 import { useCavaleiros } from 'contexto/CavaleirosContext';
 import ModalEdit from 'componentes/ModalEdit';
+import { Link } from 'react-router-dom';
 
 
 function Cavaleiro({ borderColor, borderColorBottom, boxShadow, titulo }) {
@@ -58,6 +60,12 @@ return (
                         <img onClick={() => aoDeletar(cavaleiro.id)} src={vectorDelete} alt='icone delete' />
                         <p>DELETAR</p>
                     </div>
+                    <Link style={{ textDecoration: 'none', color: 'var(--color-primary)' }} to={`/cavaleiros/card/${cavaleiro.id}`}>
+                        <div className={styles.iconesTextos}>
+                            <img src={vectorInfo} alt='icone info' />
+                            <p>INFO</p>
+                        </div>
+                    </Link>
                     <div className={styles.iconesTextos}>
                         <ModalEdit idModal={cavaleiro.id} />
                         {/* <img onClick={openModal} src={vectorEdit} alt='icone editar' /> */}

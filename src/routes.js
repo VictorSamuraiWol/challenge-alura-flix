@@ -1,4 +1,6 @@
+
 import Cavaleiros from "componentes/Grupos/Grupo/Cavaleiros";
+import CardDestaqueCavaleiro from "pages/CardDestaqueCavaleiro";
 import Inicio from "pages/Inicio";
 import Video from "pages/NovoVideo";
 import PaginaBase from "pages/PaginaBase";
@@ -14,7 +16,9 @@ function AppRoutes() {
           <Route path="/" element={<PaginaBase />}>
             <Route index element={<Inicio />}></Route>
             <Route path="/video" element={<Video />}></Route>
-            <Route path="cavaleiros/:id" element={<Cavaleiros />}></Route>
+            <Route path="cavaleiros/:id" element={<Cavaleiros />}>
+            </Route>
+            <Route path="cavaleiros/card/:id" element={<CardDestaqueCavaleiro />}></Route>
           </Route>          
         </Routes>
       </BrowserRouter>
