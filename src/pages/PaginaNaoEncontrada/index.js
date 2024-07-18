@@ -8,11 +8,11 @@ function PaginaNaoEncontrada() {
             <span className={styles.texto404}>404</span>
 
             <h1 className={styles.titulo}>
-                Ops! Cavaleiro não encontrado.
+                Ops! Página não encontrada.
             </h1>
 
             <p className={styles.paragrafo}>
-                Tem certeza de que era isso que você estava procurando?
+                Tem certeza de que era isso que você estava procurando? Verifique o endereço fornecido na barra de endereço ou no endereço da imagem.
             </p>
 
             <p className={styles.paragrafo}>

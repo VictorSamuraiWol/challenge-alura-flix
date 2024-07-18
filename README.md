@@ -23,7 +23,7 @@ Projeto com o objetivo de criar uma aplicação totalmente em React com possibil
 
 ## 📚 Materiais
 
-- Conteúdo elaborado com base nos cursos da formação React, assim como a formação Front End da plataforma Alura;
+- Conteúdo elaborado com base nos cursos da formação React, assim como a formação Front End da plataforma Alura.
 
 ## 👨‍💻 Estudante Frontend e Aws Cloud
 
