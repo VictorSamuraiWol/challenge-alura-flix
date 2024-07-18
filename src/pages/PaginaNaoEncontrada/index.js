@@ -8,7 +8,7 @@ function PaginaNaoEncontrada() {
             <span className={styles.texto404}>404</span>
 
             <h1 className={styles.titulo}>
-                Ops! Página não encontrada.
+                Ops! Cavaleiro não encontrado.
             </h1>
 
             <p className={styles.paragrafo}>
@@ -16,7 +16,7 @@ function PaginaNaoEncontrada() {
             </p>
 
             <p className={styles.paragrafo}>
-                Aguarde uns instantes e recarregue a página, ou volte para a página inicial.
+                Aguarde uns instantes e recarregue a página, ou volte para a página inicial ou coloque um link válido.
             </p>
         </div>
     )
