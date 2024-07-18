@@ -16,7 +16,7 @@ function PaginaNaoEncontrada() {
             </p>
 
             <p className={styles.paragrafo}>
-                Aguarde uns instantes e recarregue a página, ou volte para a página inicial ou coloque um link válido.
+                Aguarde uns instantes e recarregue a página, volte para a página inicial ou coloque um link válido.
             </p>
         </div>
     )
