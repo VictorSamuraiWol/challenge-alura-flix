@@ -1,5 +1,5 @@
 <p align="center">
-    <img width="150" src="src/pages/PaginaBase/printChallengeAluraFlix.png">
+    <img width="800" src="src/pages/PaginaBase/printChallengeAluraFlix.png">
 </p>
 
 # Projeto AluraFlix
