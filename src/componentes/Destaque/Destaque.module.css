@@ -28,6 +28,7 @@
     width: 50%;
 }
 
+/* Responsividade */
 @media (max-width: 1024px) {
     .destaque {
         justify-content: center;
