@@ -10,7 +10,7 @@ function CampoTextarea({ required, aoAlterarModal, nome, newValue, setNewValue, 
 
     return(
         <>
-            <label>Descrição</label>
+            <label className={styles.labelTextarea}>Descrição</label>
             <textarea 
                 value={newValue} 
                 onChange={aoAlterarModal || setNewValueFun}  

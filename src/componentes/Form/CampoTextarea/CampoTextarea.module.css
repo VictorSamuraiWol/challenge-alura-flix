@@ -3,3 +3,25 @@
     padding: 30px 10px;
     border-radius: 8px;
 }
+
+@media (max-width: 500px) {
+    .textareaContainer {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .labelTextarea {
+        margin: 0 14px;
+    }
+
+    .textarea {
+        padding: 20px 0;
+        width: 314px;
+        margin: 0 14px;
+    }
+
+    ::placeholder {
+        padding-left: 10px;
+    }
+}

@@ -30,10 +30,11 @@
     cursor: pointer;
 }
 
-@media (max-width: 430px) {
+/* Responsividade */
+@media (max-width: 500px) {
     .grupo {
-        justify-content: center;
         width: 90%;
+        box-sizing: border-box;
     }
 
     .elementCavaleiro {
@@ -45,7 +46,12 @@
     }
 
     .iconesTextosContainer {
+        gap: 20px;
         width: 100%;
-        gap: 25px;
+        font-size: 12px;        
+    }
+
+    .iconesTextos {
+        padding: 0px 8px 0px 8px;
     }
 }

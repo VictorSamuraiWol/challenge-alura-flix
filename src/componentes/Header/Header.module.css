@@ -11,7 +11,7 @@
     gap: 25px;
 }
 
-@media (max-width: 430px) {
+@media (max-width: 500px) {
     main {
         display: flex;
         flex-direction: column-reverse;
@@ -20,6 +20,7 @@
     .headerMain {
         justify-content: center;
         padding: 23px 8px;
+        border-top: 2px solid var(--color-primary);
     }
     
     .headerMain img {

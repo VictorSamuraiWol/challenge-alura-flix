@@ -1,6 +1,5 @@
 .video {
     padding: 70px 134px;
-
 }
 
 .video h1 {
@@ -18,4 +17,23 @@
     padding: 8px 0;
     border-top: 2px solid var(--color-primary);
     border-bottom: 2px solid var(--color-primary);
+}
+
+/* Responsividade */
+@media (max-width: 500px) {
+    .video {
+        padding: 50px 40px;
+    }
+
+    .video h1 {
+        font-size: 30px;
+    }
+
+    .video p {
+        font-size: 14px;
+    }
+
+    .video h3 {
+        font-size: 26px;
+    }
 }

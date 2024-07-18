@@ -7,8 +7,8 @@
     cursor: pointer;
 }
 
-@media (max-width: 430px) {
+@media (max-width: 500px) {
     .botao {
-        width: 150px;
+        width: 160px;
     }
 }

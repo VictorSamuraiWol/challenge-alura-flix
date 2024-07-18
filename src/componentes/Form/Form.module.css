@@ -27,3 +27,24 @@
     display: flex;
     gap: 30px;
 }
+
+@media (max-width: 500px) {
+    .form {
+        gap: 8px;
+    }
+
+    .tituloSelect {
+        flex-direction: column;
+    }
+
+    .imagemVideo {
+        flex-direction: column;
+    }
+
+    .botoes {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin-top: 24px;
+    }
+}

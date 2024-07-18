@@ -76,6 +76,15 @@ function ModalEdit({ idModal }) {
         setNewDescricao(event.target.value)
     }
 
+    //Limpar campos
+    function cleanForm() {
+        setNewTitulo('')
+        setNewLink('')
+        setNewTipo('')
+        setNewImagem('')
+        setNewDescricao('')
+    }
+
 
     return (
         <div className={styles.container}>
@@ -147,6 +156,7 @@ function ModalEdit({ idModal }) {
                         color='var(--color-secondary)' 
                         background='var(--background-color)' 
                         border='var(--color-secondary)' boxShadowColor='var(--color-secondary)'
+                        func={cleanForm}
                     ></Botao>
                 </div>          
             

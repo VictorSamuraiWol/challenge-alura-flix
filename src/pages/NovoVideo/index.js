@@ -9,7 +9,7 @@ function Video() {
             <Header></Header>
             <section className={styles.video}>
                 <h1>NOVO VIDEO</h1>
-                <p>COMPLETE O FORMULÁRIO PARA CRIAR UM NOVO CARD DE VIDEO.</p>
+                <p>COMPLETE O FORMULÁRIO PARA CRIAR UM NOVO CARD DE CAVALEIRO.</p>
                 <h3>Criar Card</h3>
                 <Form></Form>
             </section>

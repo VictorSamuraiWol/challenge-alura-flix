@@ -4,12 +4,10 @@
     align-items: center;
     flex-direction: column;
     gap: 22px;
-
     padding: 10px 42px 160px 42px;
     background-image: url(../Grupos/os-cavaleiros-do-zodiaco-na-tv.png);
     background-size: contain;
     text-align: center;
-
 }
 
 .cardDestaqueCavaleiro img {
@@ -27,9 +25,14 @@
     margin: 8px 0;
 }
 
-headerCard {
-    height: 15vh;
-}
-
-.rodapeCard {
+@media (max-width: 500px) {
+    .cardDestaqueCavaleiro h1 {
+        font-size: 24px;
+        padding-left: 46px;
+        padding-right: 46px;
+    }
+    
+    .cardDestaqueCavaleiro a {
+        font-size: 16px;
+    }
 }

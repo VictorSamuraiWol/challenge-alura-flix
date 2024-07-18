@@ -61,3 +61,19 @@
         padding: 30px 145px;
     }
 }
+
+@media (max-width: 500px) {
+    .modalContent {
+        top: 10px;
+        padding: 20px 100px;
+    }
+
+    .modalContent h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .modalBotoes {
+        flex-direction: column;
+    }
+}
