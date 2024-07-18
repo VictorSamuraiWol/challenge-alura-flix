@@ -11,3 +11,9 @@
     background-repeat: no-repeat;
     opacity: 0.15;
 }
+
+@media (max-width: 430px) {
+    .bannerContainer {
+        display: none;
+    }
+}

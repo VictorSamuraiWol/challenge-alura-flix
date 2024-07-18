@@ -6,3 +6,9 @@
     font-size: 20px;
     cursor: pointer;
 }
+
+@media (max-width: 430px) {
+    .botao {
+        width: 150px;
+    }
+}

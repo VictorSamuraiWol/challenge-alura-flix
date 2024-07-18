@@ -35,3 +35,9 @@
       0 0 70px var(--background-color);
   }
 }
+
+@media (max-width: 430px) {
+  .titulo {
+    width: 90%;
+  }
+}

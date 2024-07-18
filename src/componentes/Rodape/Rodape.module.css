@@ -6,3 +6,9 @@
     background-color: var(--backgroundColorButton-one);
     padding: 42px 0;
 }
+
+@media (max-width: 430px) {
+    .rodape {
+        display: none;
+    }
+}
