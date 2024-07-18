@@ -27,3 +27,18 @@
 .video {
     width: 50%;
 }
+
+@media (max-width: 1024px) {
+    .destaque {
+        justify-content: center;
+        width: 80%;
+    }
+
+    .video {
+        width: 100%;
+    }
+
+    .textos {
+        display: none;
+    }
+}

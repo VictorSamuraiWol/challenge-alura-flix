@@ -12,6 +12,7 @@
     opacity: 0.15;
 }
 
+/* Resonsividade */
 @media (max-width: 500px) {
     .bannerContainer {
         display: none;
