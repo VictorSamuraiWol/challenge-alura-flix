@@ -9,6 +9,27 @@
   --background-color: #262626;
 }
 
+/* Responsividade */
+@media (max-width: 1024px) {
+  :root {
+    /* cores: */
+    --color-primary: #FF0000;
+    --color-secondary: #950101;
+    --color-terciary: #3D0000;
+    --background-color: #000000;
+  }
+}
+
+@media (max-width: 500px) {
+  :root {
+    /* cores: */
+    --color-primary: #00A8CC;
+    --color-secondary: #0C7B93;
+    --color-terciary: #27496D;
+    --background-color: #142850;
+  }
+}
+
 /* normalize(reset css) */
 html {
   line-height: 1.15; 

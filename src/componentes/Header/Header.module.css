@@ -11,6 +11,17 @@
     gap: 25px;
 }
 
+/* Responsividade */
+@media (max-width: 700px) {
+    .headerMain {
+        justify-content: center;
+    }
+
+    .headerMain img {
+      display: none;
+    }  
+}
+
 @media (max-width: 500px) {
     main {
         display: flex;
