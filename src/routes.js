@@ -4,6 +4,7 @@ import CardDestaqueCavaleiro from "pages/CardDestaqueCavaleiro";
 import Inicio from "pages/Inicio";
 import Video from "pages/NovoVideo";
 import PaginaBase from "pages/PaginaBase";
+import PaginaNaoEncontrada from "pages/PaginaNaoEncontrada";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function AppRoutes() {
@@ -19,7 +20,8 @@ function AppRoutes() {
             <Route path="cavaleiros/:id" element={<Cavaleiros />}>
             </Route>
             <Route path="cavaleiros/card/:id" element={<CardDestaqueCavaleiro />}></Route>
-          </Route>          
+          </Route>
+          <Route path="*" element={<PaginaNaoEncontrada />}></Route>          
         </Routes>
       </BrowserRouter>
   );
