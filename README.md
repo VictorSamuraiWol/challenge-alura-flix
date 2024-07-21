@@ -16,6 +16,7 @@ Projeto com o objetivo de criar uma aplicação totalmente em React com possibil
 - [Trello](https://trello.com/) 
 - [Figma](https://www.figma.com/)
 - [Visual Studio Code](https://code.visualstudio.com/)
+- [Vercel](https://vercel.com/)
 
 ## ✨ Features
 
