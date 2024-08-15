@@ -13,6 +13,8 @@
 ## ✨ Features
 ✅ Bem vindos! Este é um projeto com o objetivo de criar uma aplicação em React com temática de uma das mais aclamadas séries de desenho anime chamada Cavaleiros do Zodíaco, com funcionalidades de ler, criar, atualizar e remover cards de forma funcional e dinâmica. Minha gratidão a Deus, Oracle e Alura pela oportunidade.
 
+✅ Welcome! This project aims to create a React application themed around one of the most acclaimed anime series, Saint Seya (Knights of the Zodiac), with features to read, create, update and delete cards in a functional and dynamic way. My gratitude goes to God, Oracle and Alura for the opportunity.
+
 <a href="https://challenge-alura-flix-gold.vercel.app/" title="View Project now"> 📟 Clique aqui para visualizar a aplicação</a><br/>
 <a href="https://github.com/VictorSamuraiWol/challenge-alura-flix" title="View Repository now"> 📜 Clique aqui para visualizar o reposiório</a>
 
