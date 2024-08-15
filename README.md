@@ -11,7 +11,7 @@
  > ℹ️ **NOTE:** Este é um repositório desenvolvido durante os meus estudos da formação React T6 - Especialização do programa [ONE](https://www.oracle.com/br/education/oracle-next-education/) e na plataforma da [ALURA](https://www.alura.com.br/).
 
 ## ✨ Features
-✅ Bem vindos! Este é um projeto com o objetivo de criar uma aplicação em React com temática de uma das mais aclamadas séries de desenho anime chamada Cavaleiros do Zodíaco, com funcionalidades de ler, criar, atualizar e remover cards de forma funcional e dinâmica.
+✅ Bem vindos! Este é um projeto com o objetivo de criar uma aplicação em React com temática de uma das mais aclamadas séries de desenho anime chamada Cavaleiros do Zodíaco, com funcionalidades de ler, criar, atualizar e remover cards de forma funcional e dinâmica. Minha gratidão a Deus, Oracle e Alura pela oportunidade.
 
 <a href="https://challenge-alura-flix-gold.vercel.app/" title="View Project now"> 📟 Clique aqui para visualizar a aplicação</a><br/>
 <a href="https://github.com/VictorSamuraiWol/challenge-alura-flix" title="View Repository now"> 📜 Clique aqui para visualizar o reposiório</a>
