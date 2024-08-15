@@ -2,7 +2,7 @@
     <img 
       src="src/pages/PaginaBase/printChallengeAluraFlix.png"
       width="800" 
-      style="border: 1px solid grey"
+      style="border: 1 solid grey;"
     >
 </p>
 
