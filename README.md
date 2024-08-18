@@ -30,8 +30,8 @@
 - [Github](https://github.com/)
 - [Vercel](https://vercel.com/)
 
-## 👨‍💻 AWS Certified Cloud Practitioner, AWS Cloud Computing and Front-End Student
-
+## <img src="src/pages/PaginaBase/icone-wolverine-sem-fundo.png" width="50" /> AWS Certified Cloud Practitioner, AWS Cloud Computing and Front-End Student 
+<br>
 <p>
     <img 
       align=left 
@@ -40,11 +40,20 @@
       src="https://github.com/VictorSamuraiWol.png"
     />
     <p>&nbsp&nbsp&nbspVictor Cardoso<br>
-    &nbsp&nbsp<a href="https://github.com/VictorSamuraiWol">
-    GitHub</a>&nbsp;|&nbsp;
-    <a href="https://www.linkedin.com/in/victor-cardoso-cloud-front/">LinkedIn</a>
-
-<br/><br/>
+    &nbsp&nbsp&nbsp
+    <a 
+        href="https://github.com/VictorSamuraiWol">
+        GitHub
+    </a>
+    &nbsp;|&nbsp;
+    <a 
+        href="https://www.linkedin.com/in/victor-cardoso-cloud-front/">
+        LinkedIn
+    </a>
+    &nbsp;|&nbsp;
+    </p>
+</p>
+<br/>
 
 ---
 
